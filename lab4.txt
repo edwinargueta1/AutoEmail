@@ -1,0 +1,57 @@
+READ ME:
+
+Files that are being turned in:
+    index.php:
+        Only used to automatically redirect user to lab.php.
+    lab4.php:
+        Contains the Welcome Screen and header.php + footer.php.
+    signup.php:
+        Contains the signup form.
+    login.php:
+        Contains the login form.
+    mailer.php:
+        Is the script, run by the cron job in the operating system, that checks wether
+        to send a message based on the time that it was set to send. Will send only if
+        the current time is equal to or greater than the 'send' time. Also updates database
+        sent value so that previous messages don't get resent.
+    lab4.css:
+        The styling of the webpages.
+    autoEmailer.php:
+        Contains page content for the send email message form.
+    PHPMailer Library
+        sendMail.php:
+            Is called out by 'mailer.php' to integrate with the PHPMailer library and
+            actually send out the email.
+    lab4.mysql:
+        Contains the database Content.
+    include:
+        header.php:
+            Contains the Meta data, like session variables, and the Nav bar information. 
+        footer.php:
+            Contains the bottom of the webpage.
+        functionBank.php:
+            Contains all the functions for error handling, logging in users, signing up users,
+            and password encryption with added  autogenerating salting.
+        login-include.php:
+            Used for aquiring the variables from the login form, calling out the error
+            handling functions and finally logging in the user.
+        signup-include.php:
+            Used for aquiring the variables from the sign up form, calling out the error
+            handling functions and finally signing up the user.
+        logout-include.php:
+            Used to get rid of all the session variables and destroy session. Then send user
+            to the welcome page.
+        db-include.php:
+            Contains all the database connection data.
+        autoEmailer-include.php:
+            Used for aquiring the variables from the autoEmailer message form, calling
+            out the error handling functions and finally sending all that data into
+            the database to be handled by the mailer.php.
+
+
+
+Completion:
+The project is fully complete.
+
+Bugs:
+None found yet.

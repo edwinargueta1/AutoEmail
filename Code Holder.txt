@@ -1,0 +1,32 @@
+<?php 
+if($_POST["insertSignUp"]){
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $databaseName = "lab4";
+
+    $signUser = $_POST["signUser"];
+    $signPassword = $_POST["signPassword"];
+
+    $connect = mysqli_connect($hostname, $username, $password, $databaseName);
+    $query = "INSERT INTO `user`(`userid`, `username`, `password`, `salt`) VALUES ('','$signUser','$signPassword','0')";
+    $result = mysqli_query($connect, $query);
+    }
+
+
+
+
+php code
+
+?>
+
+
+
+<?php
+            //Checking if data was inserted.
+                if($result){
+                    echo "User Created!";
+                }else{
+                    echo "User Creation Failed.";
+                }
+            ?>

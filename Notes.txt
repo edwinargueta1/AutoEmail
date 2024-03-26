@@ -1,0 +1,90 @@
+Lab 4:
+    Description:
+        In this Lab you will apply all the techniques you have learned in 
+        class so far and build your first backend website mailer.
+
+    Files Needed to be submitted:
+        - PHP File
+        - mailer.php File
+        - sql dump database
+            - Description of Files
+            - how much is complete
+            - known bugs
+
+    Other Points of Interest:
+        - No need for CSS, JavaScript, or HTMl
+        - Can use more PHP Files to make project work.
+        - Can use jQuery.
+
+    Requirements:
+        - Webpage (logged in)
+            - Need to input:
+                Email
+                Date 
+                Time to the nearest half hour (Using Dropdown)
+                Message
+            - Output:
+                - Message
+                - time stamp of Message
+                - Sent to database on Server
+                - Later to be sent at reciever at given time
+                - Web page Created using lab4.php
+        - Site:
+            - Must have section where a new user can register
+            - User Name and password is requried to interact
+        - Cron job
+            - Will execute every half hour(Php file) mailer.php
+            - Examine database on server
+            - Will send every message that whose time stamp is equal or less than
+            current time.
+
+    4 Must Features:
+        - Store a salted password
+        - Password Restrictions:
+            - At least 8 Characters
+            - At least 1 letter
+            - At least 1 number
+            - At least 1 special Characters
+            - Must be checked on server side and on the client side
+        - Sanatize inputs
+            - check username is alphanumeric
+            - entry is properly formatted
+                - Email
+                - Timestamp
+        - Site never fully refreshes
+
+    MySQL:
+        - Consist of two tables;
+            - User
+                - Columns:
+                    - userid
+                    - username
+                    - password
+                    - salt
+            - tables
+                - Columns:
+                    - msgrid (auto)
+                    - userid
+                    - Email
+                    - message
+                    - Timestamp
+                    - sent?(boolean)
+
+
+Mail app Password:
+xjsaqhwveblbdzes
+
+
+Color Scheme:
+
+Light Lime: #abd699
+
+Fresh Lemon: #ffe26a
+
+Teal: #75c9b7
+
+Mint: #c7ddcc
+
+Navy: #16123f
+
+
